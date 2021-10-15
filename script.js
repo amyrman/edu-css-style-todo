@@ -11,7 +11,7 @@ button.addEventListener("click", () => {
 
     const input_Text = input.value;
     
-    // WHEN NO TEXT ENTERED OUTPUT MESSAGE AND ADD CLASS
+    // WHEN NO TEXT ENTERED OUTPUT ERROR-MESSAGE AND ADD CLASS TO MAKE ERROR-MSG VISIBLE
     // ELSE REMOVE CLASS
     if (input_Text.length == 0) {
       document.querySelector("small").innerText = "Input must not be empty";
@@ -45,7 +45,8 @@ button.addEventListener("click", () => {
     // WHEN INPUT-TEXT SPAN CLICK
     itemText.addEventListener("click", function () {
 
-      // IF CLASS COMPLETED, REMOVE CLASS COMPLETED
+      // TOGGLE CLASS
+      // IF CLASS == COMPLETED, REMOVE CLASS COMPLETED
       // ELSE ADD COMPLETED -- why not classList.add/remove("completed")?
       // Increase counter
       if (itemText.getAttribute("class") == "completed") {

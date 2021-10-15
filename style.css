@@ -5,6 +5,19 @@ html  {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  scale: 2;
+  transform: scale(2);
+  transform-origin: 50% -4%;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 300px;
+  animation: 0.8s 0.2s both container-enter;
 }
 
 .title-text {
@@ -16,34 +29,33 @@ body {
 
 .counter {
   font-size: 10px;
-  /* font-weight: bold; */
   margin: 5, 5, 5, 5;
   animation: 0.5s 1.1s both fade-in;
 }
 
+input {
+  max-width: 144px;
+}
+
 .input-form  {
-  margin: 20px;
+  margin: 20px auto 4px;
   animation: 1s 1.2s both fade-in;
+}
+
+ul  {
+  margin: 10px auto;
 }
 
 li {
   list-style-type: none;
-  margin-right: 20%;
-  padding: 1%;
+  margin-right: 38px;
+  padding: 3px;
   cursor: pointer;
   animation: 0.5s 0s both add-task;
-  
 }
 
-.container {
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  max-width: 300px;
-  
-  animation: 0.8s 0.2s both container-enter;
+li > span:nth-child(1):hover {
+  text-decoration: line-through;
 }
 
 .completed {
@@ -63,20 +75,16 @@ animation: 0.3s 0s fade-out forwards;
   opacity: 1;
 }
 
-li > span:nth-child(1):hover {
-  text-decoration: line-through;
-}
-
 .error-msg {
   display: none;
   color: red;
   font-style: italic;
   font-size: 10px;
-  margin: 5px;
+  margin: 5px auto 10px;
   opacity: 0;
 }
 
-.visible {
+.error-msg.visible {
   display: block;
   animation: 1s both warning-msg;
 }
@@ -134,7 +142,7 @@ li > span:nth-child(1):hover {
 @keyframes add-task {
   0% {
     opacity: 0;
-    transform: translate(0, 40px);
+    transform: translate(0, 10px);
   }
   100% {
     opacity: 1;

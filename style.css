@@ -43,13 +43,11 @@ li {
   margin: 0 auto;
   max-width: 300px;
   
-  animation: 0.8s 0.2s container-enter;
-  animation-fill-mode: both;
+  animation: 0.8s 0.2s both container-enter;
 }
 
 .completed {
 text-decoration: line-through;
-/* color: #888; */
 animation: 0.3s 0s fade-out forwards;
 }
 
@@ -60,14 +58,10 @@ animation: 0.3s 0s fade-out forwards;
   opacity: 0.5;
   transition: opacity 0.3s;
 }
+
 .trashcan:hover {
   opacity: 1;
 }
-
-/* li > span {
-  color: lightgray;
-  transition: color 1s 0.2s;
-} */
 
 li > span:nth-child(1):hover {
   text-decoration: line-through;
@@ -92,7 +86,7 @@ li > span:nth-child(1):hover {
     opacity: 1;
   }
   to  {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 }
 
